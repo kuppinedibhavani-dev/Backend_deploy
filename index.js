@@ -4,7 +4,9 @@ const cors = require('cors');
 const app = express();
 
 // Allow frontend to access backend
-app.use(cors());
+app.use(cors({
+    origin:"https://react-frontend-deploy-psi.vercel.app/"
+}));
 
 const PORT = process.env.PORT || 5000;
 
